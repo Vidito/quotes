@@ -41,6 +41,23 @@ $quoteText= $quote['text'];
 $quoteAuthor= $quote['author'];
 $quoteEnglish=$quote['english'];
 
+function welcome(){
+ 
+    if(date("H") < 14){
+  
+      return "¡Buenos días!";
+  
+    }elseif(date("H") > 13 && date("H") <= 20){
+  
+      return "¡Buenas tardes!";
+  
+    }elseif(date("H") > 20){
+  
+      return "¡Buenas noches!";
+  
+    }
+  
+ }
 
 ?>
 
@@ -80,6 +97,7 @@ $quoteEnglish=$quote['english'];
     </style>
 </head>
 <body>
+<h1> <?php echo welcome();?> </h1>
 <h2 class="time"> <?php  echo "Hoy es " . date("l")." ". date("d/m/Y"); ?> </h2>
    <div class="wrapper">
     <p>
