@@ -41,6 +41,8 @@ $quoteText= $quote['text'];
 $quoteAuthor= $quote['author'];
 $quoteEnglish=$quote['english'];
 
+
+
 function welcome(){
  
     if(date("H") < 14){
@@ -84,7 +86,7 @@ function welcome(){
         margin: 40px;
     }
     .wrapper {
-        margin-top:90px;
+        margin-top:70px;
         padding:0;
     }
 
@@ -94,11 +96,23 @@ function welcome(){
         border-right: solid 7px white;
     }
 
+    #txt {
+       font-size:50px;
+       position:absolute;
+       right:20px;
+       top:0;
+    }
+
+.welcome {
+    margin-top:50px;
+}
     </style>
 </head>
-<body>
-<h1> <?php echo welcome();?> </h1>
-<h2 class="time"> <?php  echo "Hoy es " . date("l")." ". date("d/m/Y"); ?> </h2>
+<body onload="startTime()">
+
+<h1 class="welcome"> <?php echo welcome();?> </h1>
+<h2 class="time"> <?php  echo date("l")." ". date("d/m/Y"); ?> </h2>
+<div id="txt"></div>
    <div class="wrapper">
     <p>
     <h2> &ldquo;
@@ -111,6 +125,24 @@ function welcome(){
 
     </p>
     </div>
+
+    <script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
 </body>
 </html> 
 
