@@ -27,10 +27,12 @@ $quoteEnglish=$quote['english'];
     <title>Random Quote</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap" rel="stylesheet">
     <style>
-    
+    * {
+        padding:0;
+    }
     body {
         background-image: url("black.jpg");
-        
+        padding:0;
         text-align:center;
         color:white;
         font-family: 'Indie Flower', cursive;
@@ -45,7 +47,7 @@ $quoteEnglish=$quote['english'];
     }
 
    
-    blockquote  {
+    .wrapper {
         border-left: solid 7px white;
         border-right: solid 7px white;
     }
@@ -54,17 +56,17 @@ $quoteEnglish=$quote['english'];
 </head>
 <body>
 <h2 class="time"> <?php  echo "Hoy es " . date("l")." ". date("d/m/Y"); ?> </h2>
-<div class="wrapper">
-    <blockquote>
-    <h1> &ldquo;
+   <div class="wrapper">
+    <p>
+    <h2> &ldquo;
     <?php echo $quoteText; ?>
-    &rdquo; </h1>
+    &rdquo; </h2>
     <h2>&ldquo;
     <?php echo $quoteEnglish; ?>
     &rdquo;</h2>
     <h3><strong>- <?php echo $quoteAuthor; ?></strong></h3>
 
-    </blockquote>
+    </p>
     </div>
 </body>
 </html> 
