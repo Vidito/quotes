@@ -43,12 +43,11 @@ $quoteEnglish=$quote['english'];
         margin-top:90px;
         padding:0;
     }
-    .wrapper h1 {
-        font-size: 40px;
+
     }
     blockquote  {
-        border-left: solid 10px white;
-        border-right: solid 10px white;
+        border-left: solid 7px white;
+        border-right: solid 7px white;
     }
 
     </style>
