@@ -33,7 +33,7 @@ $quoteEnglish=$quote['english'];
         
         text-align:center;
         color:white;
-        font-family: 'Righteous', cursive;
+        font-family: 'Indie Flower', cursive;
         letter-spacing: 3px;
     }
     .time {
