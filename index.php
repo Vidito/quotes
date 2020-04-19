@@ -44,7 +44,7 @@ $quoteEnglish=$quote['english'];
         padding:0;
     }
 
-    }
+   
     blockquote  {
         border-left: solid 7px white;
         border-right: solid 7px white;
